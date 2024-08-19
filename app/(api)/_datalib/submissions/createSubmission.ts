@@ -24,7 +24,6 @@ export const CreateSubmission = async (body: {
     });
 
     if (judge === null) {
-      console.log(`judge with id: ${body.judge_id} not found.`);
       throw new NotFoundError(`judge with id: ${body.judge_id} not found.`);
     }
 
@@ -33,7 +32,6 @@ export const CreateSubmission = async (body: {
     });
 
     if (team === null) {
-      console.log(`team with id: ${body.team_id} not found.`);
       throw new NotFoundError(`team with id: ${body.team_id} not found.`);
     }
 
@@ -43,7 +41,6 @@ export const CreateSubmission = async (body: {
     });
 
     if (existingSubmission) {
-      console.log('Submission already exists');
       throw new DuplicateError('Submission already exists');
     }
 
