@@ -50,13 +50,15 @@ export default function groupingAlgorithm(judges: Judge[]) {
   judges = judges.filter((judge) => judge.role === 'judge');
   const techJudges = judges.filter((judge) => judge.specialty === 'tech');
   const desJudges = judges.filter((judge) => judge.specialty === 'design');
-  const generalJudges = judges.filter((judge) => judge.specialty === 'general');
+  const businessJudges = judges.filter(
+    (judge) => judge.specialty === 'business'
+  );
 
-  // desJudges.push(...generalJudges.splice(0, desJudges.length));
+  // desJudges.push(...businessJudges.splice(0, desJudges.length));
 
   const Tgroups = createGroups(techJudges, 'tech');
   const Dgroups = createGroups(desJudges, 'design');
-  const Ggroups = createGroups(generalJudges, 'general');
+  const Ggroups = createGroups(businessJudges, 'business');
 
   const groups: { type: string; judge_ids: object }[] = [
     ...Tgroups,

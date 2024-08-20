@@ -52,8 +52,8 @@ export default function InviteLinkForm() {
               <input type="radio" name="specialty" value="design" required />
             </div>
             <div>
-              <label>General</label>
-              <input type="radio" name="specialty" value="general" required />
+              <label>Business</label>
+              <input type="radio" name="specialty" value="business" required />
             </div>
           </div>
           <input name="role" type="hidden" value="judge" />

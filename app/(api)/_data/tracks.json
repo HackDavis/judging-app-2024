@@ -1,22 +1,22 @@
 [
   {
     "name": "No Track",
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Best Hack for Social Good",
     "weights": [0.5, 0.1, 0.1, 0.2, 0.1],
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Best Beginner Hack",
     "weights": [0.35, 0.15, 0.1, 0.2, 0.2],
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Best Interdisciplinary Hack",
     "weights": [0.35, 0.4, 0.05, 0.1, 0.1],
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Best Hardware Hack",
@@ -26,17 +26,17 @@
   {
     "name": "Best Health Hack",
     "weights": [0.35, 0.2, 0.15, 0.2, 0.1],
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Best Hack for Social Justice",
     "weights": [0.5, 0.1, 0.1, 0.2, 0.1],
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Most Creative Hack",
     "weights": [0.35, 0.05, 0.15, 0.3, 0.15],
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Best Cybersecurity Hack",
@@ -86,7 +86,7 @@
   {
     "name": "Best Entrepreneurship Hack",
     "weights": [0.35, 0.05, 0.1, 0.2, 0.3],
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Best Statistical Model",
@@ -96,7 +96,7 @@
   {
     "name": "Best DEI Hack Sponsored by Fidelity",
     "weights": [0.5, 0.1, 0.1, 0.2, 0.1],
-    "type": "general"
+    "type": "business"
   },
   {
     "name": "Best Use of Kintone",
