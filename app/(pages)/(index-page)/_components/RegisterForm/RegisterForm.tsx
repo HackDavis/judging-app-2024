@@ -77,7 +77,7 @@ export default function RegisterForm() {
       const user = registerState.body as AuthTokenInt;
       setError('');
       login(user);
-      router.push('/judges');
+      router.push('/');
     } else {
       const err = registerState.error as string;
       setError(err);

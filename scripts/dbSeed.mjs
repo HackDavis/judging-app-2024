@@ -2,6 +2,9 @@ import { getClient } from '../app/(api)/_utils/mongodb/mongoClient.mjs';
 import readline from 'readline';
 import generateData from './generateData.mjs';
 import schema from '../app/(api)/_schema/index.mjs';
+// import dotenv from 'dotenv';
+
+// dotenv.config();
 
 const rl = readline.createInterface({
   input: process.stdin,
