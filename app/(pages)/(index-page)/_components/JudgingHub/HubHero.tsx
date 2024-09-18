@@ -42,9 +42,10 @@ export default function HubHero({
   return (
     <div className={styles.container}>
       <div className={styles.welcome_text}>
-        <p>Welcome to HackDavis,</p>
+        {/*<p>Welcome!</p>*/}
         <div className={styles.name_container}>
-          <h1>{user.name}</h1>
+          <h1> Welcome! {/*{user.name}*/}</h1>
+          <p> We appreciate you for helping us judge one of California's biggest hackathons!</p>
         </div>
       </div>
       <div className={styles.gavel_cow}>
@@ -53,13 +54,13 @@ export default function HubHero({
           <Image src={judgeWig} alt="Judge Wig" className={styles.wig} />
         </div>
         <div className={styles.blurb}>
-          <div className={styles.bubble_tail}>{speechBubbleTail}</div>
+          {/* <div className={styles.bubble_tail}>{speechBubbleTail}</div>
           <p className={styles.intro_text}>You're paired with...</p>
           {members.map((member: string, index: number) => (
             <p key={index} className={styles.name}>
               {member}
             </p>
-          ))}
+          ))} */}
         </div>
       </div>
       <Image
