@@ -6,10 +6,10 @@ export default function JudgingList({ projects }: { projects: object[] }) {
   return (
     <div className={styles.container}>
       <div className={styles.top_text}>
-        <h3>Judging has begun!</h3>
-        <p>
+        <h3>While you’re waiting, feel free to...</h3>
+        {/* <p>
           You have <span>{projects.length}</span> team&#40;s&#41; left to judge:
-        </p>
+        </p> */}
       </div>
       <ProjectCarousel projects={projects} />
       <Link href="/judges/projects" className={styles.projects_button}>

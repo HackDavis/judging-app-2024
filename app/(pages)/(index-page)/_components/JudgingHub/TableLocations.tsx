@@ -25,9 +25,9 @@ export default function TableLocations() {
 
   return (
     <div className={styles.container}>
-      <Link href={figmaLink} target="_blank">
-        <div className={styles.header}>Click Here for Table Map</div>
-      </Link>
+      <p>
+        <div className={styles.header}>If you have any questions, please  ask a HackDavis director (dark blue shirt)!</div>
+      </p>
       <LogoutButton style={logOutStyle}>
         <p>Sign out</p>
       </LogoutButton>
