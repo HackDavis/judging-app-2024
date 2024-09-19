@@ -3,6 +3,8 @@ import LogoutButton from '../LogoutButton/LogoutButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import vinyl from '/public/judges/hub/vinyl.svg';
+import bunnyHand from '/public/judges/hub/bunny-hand.svg';
+import vinylPlayer from '/public/judges/hub/vinyl-player.svg';
 export default function TableLocations() {
   const logOutStyle = {
     zIndex: 1,
@@ -35,6 +37,18 @@ export default function TableLocations() {
         src={vinyl}
         alt="Vinyl"
         className={styles.vinyl}
+      />
+
+      <Image
+        src={bunnyHand}
+        alt="Bunny hand"
+        className={styles.bunny_hand}
+      />
+
+      <Image
+        src={vinylPlayer}
+        alt="Vinyl Player"
+        className={styles.vinyl_player}
       />
 
       {/* <LogoutButton style={logOutStyle}>

@@ -30,6 +30,7 @@
 
     .vinyl {
         animation: spin 6s linear infinite;
+        z-index: 1;
     }
 
     @keyframes spin {
