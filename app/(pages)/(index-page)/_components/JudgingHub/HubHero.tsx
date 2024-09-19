@@ -3,6 +3,7 @@ import styles from './HubHero.module.scss';
 
 import Image from 'next/image';
 
+import judgeHeroes from '/public/judges/hub/judgingheroes.svg';
 import judgeCow from '/public/judges/hub/judge-cow.svg';
 import judgeWig from '/public/judges/hub/judge-wig.svg';
 import bg_topleft from '/public/judges/hub/topleft.svg';
@@ -48,10 +49,30 @@ export default function HubHero({
           <p> We appreciate you for helping us judge one of California's biggest hackathons!</p>
         </div>
       </div>
+
       <div className={styles.gavel_cow}>
         <div className={styles.cow_container}>
-          <Image src={judgeCow} alt="Judge Cow" className={styles.cow} />
-          <Image src={judgeWig} alt="Judge Wig" className={styles.wig} />
+
+        <div className={styles.judgecontainer}>
+
+          <div className={styles.judgingheroes}>
+            <Image
+                src={judgeHeroes}
+                alt="Judging Animals"
+                className={styles.bottom_blurb}
+              />
+          </div>
+
+        </div>
+
+          {/* <Image
+            src={judgeHeroes}
+            alt="Judging Animals"
+            className={styles.bottom_blurb}
+          /> */}
+
+          {/* <Image src={judgeCow} alt="Judge Cow" className={styles.cow} />
+          <Image src={judgeWig} alt="Judge Wig" className={styles.wig} /> */}
         </div>
         <div className={styles.blurb}>
           {/* <div className={styles.bubble_tail}>{speechBubbleTail}</div>
@@ -63,7 +84,7 @@ export default function HubHero({
           ))} */}
         </div>
       </div>
-      <Image
+      {/*<Image
         src={bg_bottom}
         alt="bottom blurb"
         className={styles.bottom_blurb}
@@ -74,7 +95,7 @@ export default function HubHero({
         alt="top left blurb"
         className={styles.top_left_blurb}
         priority
-      />
+      /> */}
     </div>
   );
 }

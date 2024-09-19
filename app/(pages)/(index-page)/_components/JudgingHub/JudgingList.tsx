@@ -10,9 +10,17 @@ export default function JudgingList({ projects }: { projects: object[] }) {
         {/* <p>
           You have <span>{projects.length}</span> team&#40;s&#41; left to judge:
         </p> */}
+
+        <div className={styles.options}>
+          <div className={styles.box} >🔋 Charge your phone!</div>
+          <div className={styles.box}>👋 Say hi to other judges!</div>
+          <div className={styles.box}>🍿 Grab a snack and water!</div>
+        </div>
+
+
       </div>
       <ProjectCarousel projects={projects} />
-      <Link href="/judges/projects" className={styles.projects_button}>
+      {/* <Link href="/judges/projects" className={styles.projects_button}>
         View All Projects
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +37,7 @@ export default function JudgingList({ projects }: { projects: object[] }) {
             strokeLinejoin="round"
           />
         </svg>
-      </Link>
+      </Link> */}
     </div>
   );
 }

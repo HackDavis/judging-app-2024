@@ -1,6 +1,8 @@
 import styles from './TableLocations.module.scss';
 import LogoutButton from '../LogoutButton/LogoutButton';
 import Link from 'next/link';
+import Image from 'next/image';
+import vinyl from '/public/judges/hub/vinyl.svg';
 export default function TableLocations() {
   const logOutStyle = {
     zIndex: 1,
@@ -28,9 +30,16 @@ export default function TableLocations() {
       <p>
         <div className={styles.header}>If you have any questions, please  ask a HackDavis director (dark blue shirt)!</div>
       </p>
-      <LogoutButton style={logOutStyle}>
+
+      <Image
+        src={vinyl}
+        alt="Vinyl"
+        className={styles.vinyl}
+      />
+
+      {/* <LogoutButton style={logOutStyle}>
         <p>Sign out</p>
-      </LogoutButton>
+      </LogoutButton> */}
     </div>
   );
 }
