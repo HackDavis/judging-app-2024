@@ -18,7 +18,7 @@ export default function LoginPage() {
         </div>
         <LoginForm></LoginForm>
       </div>
-      <div className={styles.computer_container}>
+      {/* <div className={styles.computer_container}>
         <Image
           src="/judges/auth/computer.png"
           alt=""
@@ -31,7 +31,7 @@ export default function LoginPage() {
             objectFit: 'contain',
           }}
         />
-      </div>
+      </div> */}
     </div>
   );
 }
