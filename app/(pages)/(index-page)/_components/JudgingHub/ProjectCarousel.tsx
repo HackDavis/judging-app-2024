@@ -63,7 +63,7 @@ export default function JudgingList({ projects }: { projects: object[] }) {
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.viewport} ref={emblaRef}>
+      <div className={styles.viewport} ref={emblaRef}>
         <div className={styles.projects}>
           {projects.map((project, index) => (
             <JudgingCard key={index} project={project} />
@@ -112,7 +112,7 @@ export default function JudgingList({ projects }: { projects: object[] }) {
             }}
           />
         </button>
-      </div> */}
+      </div>
     </div>
   );
 }
