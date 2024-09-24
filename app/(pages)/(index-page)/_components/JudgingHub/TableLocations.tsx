@@ -33,23 +33,25 @@ export default function TableLocations() {
         <div className={styles.header}>If you have any questions, please  ask a HackDavis director (dark blue shirt)!</div>
       </p>
 
-      <Image
-        src={vinyl}
-        alt="Vinyl"
-        className={styles.vinyl}
-      />
+      <div className={styles.vinyl_container}>
+        <Image
+          src={vinyl}
+          alt="Vinyl"
+          className={styles.vinyl}
+        />
 
-      <Image
-        src={bunnyHand}
-        alt="Bunny hand"
-        className={styles.bunny_hand}
-      />
+        <Image
+          src={bunnyHand}
+          alt="Bunny hand"
+          className={styles.bunny_hand}
+        />
 
-      <Image
-        src={vinylPlayer}
-        alt="Vinyl Player"
-        className={styles.vinyl_player}
-      />
+        <Image
+          src={vinylPlayer}
+          alt="Vinyl Player"
+          className={styles.vinyl_player}
+        />
+      </div>  
 
       {/* <LogoutButton style={logOutStyle}>
         <p>Sign out</p>
