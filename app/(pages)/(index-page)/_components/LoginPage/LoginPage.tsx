@@ -5,7 +5,17 @@ import styles from './LoginPage.module.scss';
 export default function LoginPage() {
   return (
     <div className={styles.container}>
-      <div className={styles.hero}>
+      <div className={styles.section}>
+        <Image src="/login/hd_logo.svg" alt="hd_logo" height={50} width={50} />
+      </div>
+      <div className={styles.section}>
+        <h3>Welcome Judges!</h3>
+        <p>Enter your username and password.</p>
+      </div>
+      <div className={styles.section}>
+        <LoginForm></LoginForm>
+      </div>
+      {/* <div className={styles.hero}>
         <Image src="/judges/auth/judge_login_hero.png" alt="" fill />
       </div>
       <div className={styles.form_section}>
@@ -18,7 +28,7 @@ export default function LoginPage() {
         </div>
         <LoginForm></LoginForm>
       </div>
-      {/* <div className={styles.computer_container}>
+      <div className={styles.computer_container}>
         <Image
           src="/judges/auth/computer.png"
           alt=""

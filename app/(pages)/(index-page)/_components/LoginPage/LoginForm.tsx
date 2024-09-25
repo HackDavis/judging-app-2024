@@ -4,7 +4,8 @@ import { useAuth } from '@hooks/useAuth';
 import LoginAction from '@actions/auth/login';
 
 import styles from './LoginForm.module.scss';
-import Link from 'next/link';
+// import Link from 'next/link';
+import Image from 'next/image';
 import AuthTokenInt from '@typeDefs/authToken';
 
 export default function LoginForm() {
@@ -54,35 +55,59 @@ export default function LoginForm() {
 
   return (
     <form action={Login} className={styles.container}>
-      <p className={styles.error_msg}>{error}</p>
       <div className={styles.fields}>
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={handleEmailChange}
-          className={`${error ? styles.error : null}`}
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={handlePasswordChange}
-          className={`${error ? styles.error : null}`}
-        />
+        <div className={styles.input_container}>
+          <label htmlFor="email">Username</label>
+          <input
+            name="email"
+            type="email"
+            // placeholder="Username"
+            value={email}
+            onChange={handleEmailChange}
+            className={`${error ? styles.error : null}`}
+          />
+        </div>
+        <div className={styles.input_container}>
+          <label htmlFor="password">Password</label>
+          <input
+            name="password"
+            type="password"
+            // placeholder="Password"
+            value={password}
+            onChange={handlePasswordChange}
+            className={`${error ? styles.error : null}`}
+          />
+        </div>
+        <p className={styles.error_msg}>{error}</p>
       </div>
-      <button
-        className={`${styles.login_button} ${isValid ? styles.valid : null}`}
-        type="submit"
-        disabled={!isValid}
-      >
-        Log-in
-      </button>
-      <div className={styles.not_judge}>
+      <div className={styles.login_button_container}>
+        <div className={styles.froggie_container}>
+          <Image
+            src="/login/LogIn_DrumStick.svg"
+            alt="froggie_drumstick"
+            width={20}
+            height={20}
+            className={styles.drumstick}
+          />
+          <Image
+            src="/login/LogIn_Froggy.svg"
+            alt="froggie"
+            width={50}
+            height={50}
+            className={styles.froggie}
+          />
+        </div>
+        <button
+          className={`${styles.login_button} ${isValid ? styles.valid : null}`}
+          type="submit"
+          disabled={!isValid}
+        >
+          Log in →
+        </button>
+      </div>
+      {/* <div className={styles.not_judge}>
         Not a judge? <Link href="/hackers">Click here</Link>
-      </div>
+      </div> */}
     </form>
   );
 }
