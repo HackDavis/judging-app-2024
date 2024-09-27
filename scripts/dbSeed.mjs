@@ -2,9 +2,6 @@ import { getClient } from '../app/(api)/_utils/mongodb/mongoClient.mjs';
 import readline from 'readline';
 import generateData from './generateData.mjs';
 import schema from '../app/(api)/_schema/index.mjs';
-// import dotenv from 'dotenv';
-
-// dotenv.config();
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -17,13 +14,16 @@ async function dbSeed(collectionNames, numDocuments, wipe) {
     const db = client.db();
 
     const schemaKeys = Object.keys(schema);
+    schemaKeys.push('admin');
     for (const collectionName of collectionNames.split(' ')) {
       if (schemaKeys.find((key) => key === collectionName) === undefined) {
         console.log(`Collection ${collectionName} not found.`);
         continue;
       }
 
-      const collection = db.collection(collectionName);
+      const collection = db.collection(
+        collectionName === 'admin' ? 'judges' : collectionName
+      );
 
       if (wipe === 'y') {
         await collection.deleteMany({});
@@ -58,7 +58,7 @@ async function gatherInput() {
     );
 
     const numDocumentsStr = await askQuestion(
-      'How many documents would you like to generate? Enter a number: '
+      'How many documents would you like to generate (admin generates only one document regardless)? Enter a number: '
     );
     const numDocuments = parseInt(numDocumentsStr);
 

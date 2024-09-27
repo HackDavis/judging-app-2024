@@ -4,7 +4,6 @@ import tracks from '../app/(api)/_data/tracks.json' assert { type: 'json' };
 
 function generateData(collectionName, numDocuments) {
   const specialties = ['tech', 'business', 'design'];
-  const roles = ['judge', 'admin'];
   const fakeTracks = Array.from(
     { length: Math.ceil(Math.random() * 5) },
     () => tracks[Math.floor(Math.random() * tracks.length)].name
@@ -18,8 +17,16 @@ function generateData(collectionName, numDocuments) {
       password: faker.internet.password(),
       specialty: specialties[Math.floor(Math.random() * specialties.length)],
       judge_group_id: new ObjectId(),
-      role: roles[Math.floor(Math.random() * roles.length)],
+      role: 'judge',
     }));
+  } else if (collectionName === 'admin') {
+    data.push({
+      name: 'Admin',
+      email: 'admin@hackdavis.io',
+      password: 'hackdavis123',
+      specialty: 'tech',
+      role: 'admin',
+    });
   } else if (collectionName === 'teams') {
     data = Array.from({ length: numDocuments }, () => ({
       number: faker.number.int({ min: 1, max: 1000 }),
