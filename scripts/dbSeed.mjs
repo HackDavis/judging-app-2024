@@ -1,7 +1,6 @@
 import { getClient } from '../app/(api)/_utils/mongodb/mongoClient.mjs';
 import readline from 'readline';
 import generateData from './generateData.mjs';
-import schema from '../app/(api)/_schema/index.mjs';
 // import dotenv from 'dotenv';
 
 // dotenv.config();
@@ -16,7 +15,12 @@ async function dbSeed(collectionNames, numDocuments, wipe) {
     const client = await getClient();
     const db = client.db();
 
-    const schemaKeys = Object.keys(schema);
+    const schema = await db.listCollections().toArray();
+    const schemaKeys = [];
+    for (const collection of schema) {
+      schemaKeys.push(collection.name);
+    }
+
     for (const collectionName of collectionNames.split(' ')) {
       if (schemaKeys.find((key) => key === collectionName) === undefined) {
         console.log(`Collection ${collectionName} not found.`);
