@@ -3,6 +3,6 @@ import getQueries from '@utils/request/getQueries';
 import { GetManyJudgeGroupToTeams } from '@datalib/judgeGroups/getJudgeGroupToTeam';
 
 export async function GET(request: NextRequest) {
-  const queries = await getQueries(request);
+  const queries = await getQueries(request, 'judgeGroupToTeams');
   return GetManyJudgeGroupToTeams(queries);
 }
